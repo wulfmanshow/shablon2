@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+pair<T,T>f(T *arr,int size)//возвращаемое значение пара которая содержит 2 елемента типа T
+{
+    T miN=arr[0], maX=arr[size-1];//^^
+    for (int i = 0;i <size;i++)
+    {
+        if (miN > arr[i])
+            miN = arr[i];
+        else if (maX < arr[i])
+            maX = arr[i];
+    }
+    return make_pair(miN,maX); //создать пару
+}
+int main()
+{
+  
+}
